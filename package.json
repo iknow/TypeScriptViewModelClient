@@ -1,0 +1,55 @@
+{
+  "name": "@engoo/view-model",
+  "version": "20.1.0",
+  "description": "Utilities for building view models that can be deserialized from and serialized to the engoo API.",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "next.js",
+    "next.d.ts"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iknow/engoojs.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf lib/",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch",
+    "specs": "mocha --require ts-node/register --require src/tests/mocha.js 'src/**/*.spec.ts' 'src/**/*.spec.js' --reporter ${MOCHA_REPORTER:-spec}",
+    "lint": "eslint",
+    "test": "yarn run typecheck && yarn run specs && yarn run lint"
+  },
+  "peerDependencies": {
+    "immutable": "^4.0.0"
+  },
+  "devDependencies": {
+    "@engoo/eslint-config-engoo": "^15.6.2",
+    "@engoo/eslint-plugin-engoo": "^6.1.7",
+    "@engoo/hojicha": "^2.2.0",
+    "@engoo/json-report": "^2.1.17",
+    "@types/chai": "^5.2.3",
+    "@types/lodash": "^4.17.23",
+    "@types/mocha": "^10.0.10",
+    "@typescript-eslint/utils": "^8.55.0",
+    "chai": "^6.2.2",
+    "chai-immutable": "^2.1.0",
+    "eslint": "^9.39.2",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-mocha": "^11.2.0",
+    "immutable": "^4.3.7",
+    "mocha": "^11.7.5",
+    "sinon": "^21.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0"
+  },
+  "dependencies": {
+    "fp-ts": "^2.16.11",
+    "io-ts": "^2.2.22",
+    "lodash": "^4.17.23"
+  }
+}
